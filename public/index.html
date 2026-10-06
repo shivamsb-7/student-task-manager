@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>Student Task Manager</h1>
+      <p>Manage academic tasks and DevOps lab work</p>
+    </div>
+    <span id="health" class="health">Checking...</span>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add New Task</h2>
+
+      <form id="taskForm">
+        <div class="grid">
+          <input id="title" placeholder="Task title" required>
+          <input id="dueDate" type="date">
+          <select id="priority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
+          <select id="status">
+            <option selected>Pending</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+          </select>
+        </div>
+
+        <textarea id="description" placeholder="Task description"></textarea>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>My Tasks</h2>
+        <button id="refreshButton" class="secondary">Refresh</button>
+      </div>
+      <div id="taskList"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
