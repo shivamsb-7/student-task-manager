@@ -6,7 +6,7 @@ describe("Student Task Manager API", () => {
     const response = await request(app).get("/health");
 
     expect(response.statusCode).toBe(200);
-    expect(response.body.status).toBe("UP");
+    expect(response.body.status).toBe("DOWN");
   });
 
   test("GET /api/tasks returns an array", async () => {
